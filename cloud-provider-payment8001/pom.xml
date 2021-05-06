@@ -13,10 +13,10 @@
 
     <dependencies>
         <!--eureka-client-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
+<!--        </dependency>-->
         <!--引入自定义的api通用包，可以使用Payment和支付Entity-->
 <!--        <dependency>-->
 <!--            <groupId>com.atguigu.springcloud</groupId>-->
