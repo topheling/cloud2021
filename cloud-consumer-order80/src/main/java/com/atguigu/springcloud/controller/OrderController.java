@@ -30,4 +30,9 @@ public class OrderController {
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id){
         return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
     }
+
+    @GetMapping("/consumer/payment/discovery")
+    public Object discovery(){
+        return restTemplate.getForObject(PAYMENT_URL + "/payment/discovery/", Object.class);
+    }
 }
