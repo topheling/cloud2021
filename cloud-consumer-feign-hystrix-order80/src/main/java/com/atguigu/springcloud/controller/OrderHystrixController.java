@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
-//@DefaultProperties(defaultFallback = "payment_Global_FallbackMethod")
+@DefaultProperties(defaultFallback = "payment_Global_FallbackMethod")
 public class OrderHystrixController {
 
     @Resource
@@ -29,9 +29,10 @@ public class OrderHystrixController {
 
 
     @GetMapping("/consumer/payment/hystrix/timeout/{id}")
-    @HystrixCommand(fallbackMethod = "paymentInfo_TimeoutHandler", commandProperties = {
-            @HystrixProperty(name ="execution.isolation.thread.timeoutInMilliseconds",value = "1500")
-    })
+//    @HystrixCommand(fallbackMethod = "paymentInfo_TimeoutHandler", commandProperties = {
+//            @HystrixProperty(name ="execution.isolation.thread.timeoutInMilliseconds",value = "1500")
+//    })
+    @HystrixCommand
     public String paymentInfo_Timeout(@PathVariable("id") Integer id){
         int age = 10/0;
 //        int timeNumber = 3000;
