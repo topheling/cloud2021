@@ -10,5 +10,6 @@ spring:
         server-addr: localhost:8848 #配置Nacos地址
 
 #消费者将要去访问的微服务名称（注册成功进nacos的微服务提供者）
+#自定义的
 server-url:
   nacos-user-service: http://nacos-payment-provider
