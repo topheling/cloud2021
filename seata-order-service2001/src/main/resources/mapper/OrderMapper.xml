@@ -13,12 +13,12 @@
     </resultMap>
 
     <insert id="create">
-        INSERT INTO `t_order` (`id`, `user_id`, `product_id`, `count`, `money`, `status`)
+        INSERT INTO t_order (id, user_id, product_id, count, money, status)
         VALUES (NULL, #{userId}, #{productId}, #{count}, #{money}, 0);
     </insert>
 
     <update id="update">
-        UPDATE `t_order`
+        UPDATE t_order
         SET status = 1
         WHERE user_id = #{userId} AND status = #{status};
     </update>
